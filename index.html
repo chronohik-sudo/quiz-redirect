@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Watch Video & Start Quiz</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 40px;">
+
+  <h2>📹 Watch the Video First</h2>
+
+  <!-- Embed your video -->
+  <iframe width="640" height="360"
+    src="https://www.youtube.com/watch?v=WUaK6WZLAE8"
+    frameborder="0" allowfullscreen>
+  </iframe>
+
+  <br><br>
+
+  <button onclick="startQuiz()" style="padding: 12px 20px; font-size: 16px;">
+    Start Quiz
+  </button>
+
+  <script>
+    function startQuiz() {
+      const quizzes = [
+        "https://forms.office.com/r/uErqVt007N",
+        "https://forms.office.com/r/RhD58pX4cT",
+        "https://forms.office.com/r/sqrfcftNuB",
+        "https://forms.office.com/r/23XWLT84sN"
+      ];
+
+      const randomIndex = Math.floor(Math.random() * quizzes.length);
+      const selectedQuiz = quizzes[randomIndex];
+
+      window.location.href = selectedQuiz;
+    }
+  </script>
+
+</body>
+</html>
